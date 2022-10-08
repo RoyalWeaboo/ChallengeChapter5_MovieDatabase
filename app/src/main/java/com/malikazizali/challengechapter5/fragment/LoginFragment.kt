@@ -47,15 +47,11 @@ class LoginFragment : Fragment() {
         binding.btnLogin.setOnClickListener {
             val usernameInput = binding.etUsername.text.toString()
             val passwordInput = binding.etPassword.text.toString()
-
-            if(usernameInput.isEmpty()){
-                binding.etUsername.requestFocus()
-            }
-            else if (passwordInput.isEmpty()){
-                binding.etPassword.requestFocus()
+            if (usernameInput!=""&&passwordInput!="") {
+                login(view, usernameInput, passwordInput)
             }
             else{
-                login(view, usernameInput, passwordInput)
+                Toast.makeText(requireActivity(), context?.getString(R.string.empty_login_input), Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -83,18 +79,19 @@ class LoginFragment : Fragment() {
                         addSession.putString("session", "true")
                         addSession.apply()
 
-                        Toast.makeText(requireActivity(), "Berhasil Login", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireActivity(), context?.getString(R.string.success_login), Toast.LENGTH_SHORT).show()
                         binding.loginProgressBar.visibility = View.GONE
                         Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment)
                     }
                     else{
+                        Toast.makeText(requireActivity(), context?.getString(R.string.failed_login), Toast.LENGTH_SHORT).show()
                         binding.loginProgressBar.visibility = View.GONE
                     }
                 }
 
             } else {
                 binding.loginProgressBar.visibility = View.GONE
-                Toast.makeText(context, "Belum ada data login", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), context?.getString(R.string.empty_login_input), Toast.LENGTH_SHORT).show()
             }
         })
     }

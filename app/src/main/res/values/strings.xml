@@ -28,4 +28,25 @@
     <string name="tanggal_rilis">Tanggal Rilis :</string>
     <string name="welcome_user">Selamat Datang,</string>
     <string name="home">Beranda</string>
+
+    <!--toast-->
+    <string name="pass_tidak_sesuai">Password tidak sesuai !</string>
+    <string name="success_reg">Berhasil mendaftarkan akun baru !</string>
+    <string name="failed_reg">Gagal mendaftarkan akun baru !</string>
+    <string name="no_data">Tidak ada data untuk ditampilkan !</string>
+    <string name="empty_login_input">Username dan Password tidak boleh kosong !</string>
+    <string name="success_login">Berhasil Masuk !</string>
+    <string name="failed_login">Username atau password salah !</string>
+    <string name="empty_login_database">Tidak ada data akun !</string>
+    <string name="success_update">Berhasil memperbarui data profil !</string>
+    <string name="detail_film">Sinopsis Film :</string>
+    <string name="bahasa">Bahasa :</string>
+    <string name="detailmovieposter">Poster Film</string>
+    <string name="back_to_home">Kembali ke Beranda</string>
+    <string name="profil">Profil</string>
+    <string name="ganti_bahasa">Ganti Bahasa</string>
+    <string name="foto_profil">Foto Profil</string>
+    <string name="perbarui_data_user">Perbarui Data User</string>
+
+
 </resources>

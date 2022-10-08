@@ -16,6 +16,7 @@
         app:titleTextColor="@color/white">
 
         <ImageView
+            android:contentDescription="@string/back_to_home"
             android:id="@+id/arrowBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
 
         <ImageView
             android:id="@+id/changeLanguage"
+            android:contentDescription="@string/ganti_bahasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -39,6 +41,7 @@
 
 
     <ImageView
+        android:contentDescription="@string/foto_profil"
         android:id="@+id/ivProfile"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -56,7 +59,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:src="@drawable/ic_baseline_edit_24" />
+        android:src="@drawable/ic_baseline_edit_24"
+        android:contentDescription="@string/perbarui_data_user" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
@@ -145,6 +149,14 @@
             android:backgroundTint="@color/teal_700"
             android:text="@string/keluar" />
     </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/profileProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#28858585"
+            android:padding="180dp" />
+
     </RelativeLayout>
 
 </ScrollView>

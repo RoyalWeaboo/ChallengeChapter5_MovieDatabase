@@ -20,4 +20,21 @@
     <string name="tanggal_rilis">Release Date :</string>
     <string name="welcome_user">Welcome,</string>
     <string name="home">Home</string>
+    <string name="pass_tidak_sesuai">Password does not match !</string>
+    <string name="success_reg">Successfully registered a new account !</string>
+    <string name="failed_reg">Failed to register a new account !</string>
+    <string name="no_data">There is no data to show !</string>
+    <string name="empty_login_input">Username and Password cannot be empty !</string>
+    <string name="failed_login">Wrong Username or Password</string>
+    <string name="empty_login_database">Empty login data !</string>
+    <string name="success_login">Login Successful !</string>
+    <string name="success_update">Successfully updated profile data !</string>
+    <string name="detail_film">Synopsis :</string>
+    <string name="bahasa">Language :</string>
+    <string name="detailmovieposter">Movie Poster</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="profil">Profile</string>
+    <string name="ganti_bahasa">Change Language</string>
+    <string name="foto_profil">Profile Picture</string>
+    <string name="perbarui_data_user">Update User Data</string>
 </resources>

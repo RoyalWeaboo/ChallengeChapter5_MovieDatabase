@@ -94,7 +94,6 @@ class MovieViewModel : ViewModel() {
     }
 
     fun callApiAddUser(namaLengkap : String, username : String, pass : String) {
-        loading.postValue(true)
         RetrofitClientUser.instance.addUser(User(namaLengkap, username, pass))
             .enqueue(object : Callback<ResponseUserItem> {
                 override fun onResponse(
@@ -107,12 +106,10 @@ class MovieViewModel : ViewModel() {
                     } else {
                         Log.d("data", response.body().toString())
                     }
-                    loading.postValue(false)
                 }
 
                 override fun onFailure(call: Call<ResponseUserItem>, t: Throwable) {
                     Log.d("data", call.toString())
-                    loading.postValue(true)
                 }
 
             })

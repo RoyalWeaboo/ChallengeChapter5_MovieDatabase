@@ -3,7 +3,6 @@ package com.malikazizali.challengechapter5.fragment
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -36,6 +35,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.profileProgressBar.visibility = View.GONE
         sp = requireActivity().getSharedPreferences("loginstatus_ch5", Context.MODE_PRIVATE)
 
         getSavedData()
@@ -53,6 +53,7 @@ class ProfileFragment : Fragment() {
             enableEditMode()
             binding.btnEdit.visibility = View.VISIBLE
             binding.btnEdit.setOnClickListener {
+                binding.profileProgressBar.visibility = View.VISIBLE
                 val savedId = sp.getString("id", "")
                 val newNamaLengkap = binding.etNamaLengkap.text.toString()
                 val newUsername = binding.etUsername.text.toString()
@@ -102,8 +103,9 @@ class ProfileFragment : Fragment() {
         vm.callApiEditUser(id, namaLengkap, username, password)
         vm.getLDUpdateUser().observe(viewLifecycleOwner, Observer {
             if (it != null) {
+                binding.profileProgressBar.visibility = View.GONE
                 Toast.makeText(
-                    requireActivity(), "Berhasil memperbarui data profil !", Toast.LENGTH_SHORT
+                    requireActivity(), context?.getString(R.string.success_update), Toast.LENGTH_SHORT
                 ).show()
 
                 val updateCookies = sp.edit()
@@ -116,11 +118,6 @@ class ProfileFragment : Fragment() {
     }
 
     fun setLocale(lang: String) {
-//        val myLocale = Locale(lang)
-//        val res = resources
-//        val conf = res.configuration
-//        conf.locale = myLocale
-//        res.updateConfiguration(conf, res.displayMetrics)
 
         val locale = Locale(lang)
         Locale.setDefault(locale)
@@ -155,8 +152,7 @@ class ProfileFragment : Fragment() {
             val alertDialog: AlertDialog = builder.create()
             alertDialog.setCancelable(false)
             alertDialog.show()
-        }
-        else if (currLang == "en") {
+        } else if (currLang == "en") {
             val builder = AlertDialog.Builder(requireContext())
             builder.setTitle("Change Language")
             builder.setMessage("Change the language to Bahasa ?\nThe app will be restarted to apply the changes")

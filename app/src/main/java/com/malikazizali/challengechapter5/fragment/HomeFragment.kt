@@ -66,7 +66,7 @@ class HomeFragment : Fragment() {
                 binding.rvMovie.adapter = adapter
 
             } else {
-                Toast.makeText(context, "There is no data to show", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), context?.getString(R.string.no_data), Toast.LENGTH_SHORT).show()
             }
         })
         viewModel.callApiFilm()
