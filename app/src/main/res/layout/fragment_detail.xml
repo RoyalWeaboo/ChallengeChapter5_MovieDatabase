@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DetailFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/teal_700"
+        app:titleTextColor="@color/white">
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            style="@style/toolbarTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="@string/desc_title" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailToolbar"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@color/black" />
+
+        <TextView
+            android:id="@+id/movieTitle"
+            style="@style/cardTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/movieImage"
+            android:text="@string/judulFilm" />
+
+        <LinearLayout
+            android:id="@+id/movieRatingGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieTitle"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/movieImage"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/detailTitleText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rating" />
+
+            <TextView
+                android:id="@+id/movieRating"
+                style="@style/normalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/movieRating"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/movieReleaseDateGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieRatingGroup"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/movieImage"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/detailTitleText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tanggal_rilis" />
+
+            <TextView
+                android:id="@+id/movieReleaseDate"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/movieDate"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/movieLanguageGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieReleaseDateGroup"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/movieImage"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/detailTitleText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bahasa :" />
+
+            <TextView
+                android:id="@+id/movieLang"
+                style="@style/normalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/movieLanguage"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/detailTextTitle"
+            style="@style/detailTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/movieImage"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:text="Detail Film :" />
+
+        <TextView
+            style="@style/normalText"
+            android:id="@+id/detaiLFilm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailTextTitle"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:text="@string/lorem_ipsum" />
+    </RelativeLayout>
+</RelativeLayout>

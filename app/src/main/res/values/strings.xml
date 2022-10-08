@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">ChallengeChapter5</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+
+    <string name="username" translatable="false">username</string>
+    <string name="tmdblogomasuk">tmdbLogoMasuk</string>
+    <string name="password" translatable="false">password</string>
+    <string name="button_login">Masuk</string>
+    <string name="tv_belumpunyaakun">Belum Punya Akun ?</string>
+    <string name="tv_daftar">Daftar Sekarang</string>
+    <string name="tv_login">Masuk</string>
+    <string name="tv_register">Daftar</string>
+    <string name="tv_sudahpunyaakun">Sudah Punya Akun ?</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="judulFilm">Judul</string>
+    <string name="movieRating" translatable="false">5</string>
+    <string name="movieLanguage">Bahasa</string>
+    <string name="movieDate" translatable="false">2022–10–07</string>
+    <string name="movie_image_description">garmbar film</string>
+    <string name="perbarui_profil">Perbarui Profil</string>
+    <string name="keluar">Keluar</string>
+    <string name="profilTitle">Profil</string>
+    <string name="desc_title">Detail Film</string>
+    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis risus ligula, sit amet sagittis magna viverra eget. Nam in erat venenatis, vehicula diam et, molestie lorem. Duis hendrerit rhoncus elit, in congue tellus consectetur vitae. Maecenas ut est non urna vulputate molestie imperdiet nec velit. Curabitur quis euismod arcu. Maecenas at tellus sit amet nulla cursus cursus. Etiam non fermentum ante, ut porta magna. Vivamus elementum pretium luctus. Maecenas consequat lectus non facilisis euismod.</string>
+    <string name="rating" translatable="false">Rating :</string>
+    <string name="tanggal_rilis">Tanggal Rilis :</string>
+    <string name="welcome_user">Selamat Datang,</string>
+    <string name="home">Beranda</string>
 </resources>

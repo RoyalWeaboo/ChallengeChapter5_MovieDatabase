@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChallengeChapter5</string>
+    <string name="tmdblogomasuk">login_logo</string>
+    <string name="button_login">Login</string>
+    <string name="tv_belumpunyaakun">Don\'t have an account yet ?</string>
+    <string name="tv_daftar">Register</string>
+    <string name="tv_login">Login</string>
+    <string name="tv_register">Register</string>
+    <string name="tv_sudahpunyaakun">Already have an account ?</string>
+    <string name="konfirmasi_password">Confirm Password</string>
+    <string name="nama_lengkap">Fullname</string>
+    <string name="judulFilm">Title</string>
+    <string name="movieLanguage">Language</string>
+    <string name="movie_image_description">movie image</string>
+    <string name="perbarui_profil">Update Profile</string>
+    <string name="keluar">Logout</string>
+    <string name="profilTitle">Profile</string>
+    <string name="desc_title">Movie Detail</string>
+    <string name="tanggal_rilis">Release Date :</string>
+    <string name="welcome_user">Welcome,</string>
+    <string name="home">Home</string>
+</resources>
