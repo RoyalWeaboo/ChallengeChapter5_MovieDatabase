@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,7 +47,7 @@ class ProfileFragment : Fragment() {
 
         binding.changeLanguage.setOnClickListener {
             getLocale()
-            openChangeLangDialog(view, currLang)
+            showChangeLanguageDialogue(currLang)
         }
 
         binding.ivEdit.setOnClickListener {
@@ -136,14 +137,15 @@ class ProfileFragment : Fragment() {
         currLang = lang
     }
 
-    fun openChangeLangDialog(view: View, currLang: String) {
-        if (currLang == "id") {
+    fun showChangeLanguageDialogue(currLang : String){
+        if (currLang == "in") {
             val builder = AlertDialog.Builder(requireContext())
             builder.setTitle("Ganti Bahasa")
             builder.setMessage("Ganti bahasa menjadi bahasa inggris ?\nAplikasi akan direstart untuk menerapkan perubahan")
             builder.setIcon(R.drawable.ic_baseline_language_24_black)
-            builder.setPositiveButton("Korfimasi") { _, _ ->
+            builder.setPositiveButton("Korfimasi") { dialog, _ ->
                 setLocale("en")
+                dialog.dismiss()
                 startActivity(Intent(requireActivity(), MainActivity::class.java))
             }
             builder.setNegativeButton("Batalkan") { dialog, _ ->
@@ -157,8 +159,9 @@ class ProfileFragment : Fragment() {
             builder.setTitle("Change Language")
             builder.setMessage("Change the language to Bahasa ?\nThe app will be restarted to apply the changes")
             builder.setIcon(R.drawable.ic_baseline_language_24_black)
-            builder.setPositiveButton("Confirm") { _, _ ->
-                setLocale("id")
+            builder.setPositiveButton("Confirm") { dialog, _ ->
+                setLocale("in")
+                dialog.dismiss()
                 startActivity(Intent(requireActivity(), MainActivity::class.java))
             }
             builder.setNegativeButton("Cancel") { dialog, _ ->
@@ -169,5 +172,4 @@ class ProfileFragment : Fragment() {
             alertDialog.show()
         }
     }
-
 }

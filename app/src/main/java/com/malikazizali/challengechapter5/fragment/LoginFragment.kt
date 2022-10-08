@@ -87,6 +87,7 @@ class LoginFragment : Fragment() {
                         Toast.makeText(requireActivity(), context?.getString(R.string.failed_login), Toast.LENGTH_SHORT).show()
                         binding.loginProgressBar.visibility = View.GONE
                     }
+                    binding.loginProgressBar.visibility = View.GONE
                 }
 
             } else {
