@@ -61,7 +61,7 @@ class RegisterFragment : Fragment() {
     fun addNewUser(view : View,namaLengkap: String, username: String, pass: String) {
         binding.registerProgressBar.visibility = View.VISIBLE
         val vm = ViewModelProvider(requireActivity()).get(MovieViewModel::class.java)
-        vm.callApiAddUser(namaLengkap, username, pass)
+        vm.callApiAddUser( namaLengkap,username, pass)
         vm.getLDNewUser().observe(viewLifecycleOwner, Observer {
             if (it != null) {
                 Log.d("dataReg", it.toString())

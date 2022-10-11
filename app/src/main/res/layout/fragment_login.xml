@@ -106,11 +106,11 @@
     </LinearLayout>
 
     <ProgressBar
-        android:background="#28858585"
+        android:id="@+id/loginProgressBar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/loginProgressBar"
-        android:padding="180dp"/>
+        android:background="#28858585"
+        android:padding="180dp" />
 
 
 </RelativeLayout>

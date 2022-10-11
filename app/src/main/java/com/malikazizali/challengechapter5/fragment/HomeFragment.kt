@@ -49,7 +49,6 @@ class HomeFragment : Fragment() {
         val viewModel = ViewModelProvider(requireActivity()).get(MovieViewModel::class.java)
 
         viewModel.getLDMovie().observe(viewLifecycleOwner, Observer {
-
             viewModel.loading.observe(viewLifecycleOwner, Observer {
                 when (it) {
                     true -> binding.homeProgressBar.visibility = View.VISIBLE

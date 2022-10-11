@@ -133,7 +133,7 @@ class ProfileFragment : Fragment() {
     }
 
     fun getLocale() {
-        val lang = resources.getConfiguration().locale.getLanguage();
+        val lang = resources.getConfiguration().locale.getLanguage()
         currLang = lang
     }
 
